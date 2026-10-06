@@ -638,6 +638,10 @@
       "import": "./src/SqlToRest/util.ts",
       "types": "./src/SqlToRest/util.ts"
     },
+    "./Status": {
+      "import": "./src/Status/index.tsx",
+      "types": "./src/Status/index.tsx"
+    },
     "./StatusCode": {
       "import": "./src/StatusCode/index.tsx",
       "types": "./src/StatusCode/index.tsx"

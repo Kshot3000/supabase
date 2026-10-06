@@ -28,6 +28,7 @@ import {
 } from 'ui'
 import { Admonition } from 'ui-patterns/Admonition'
 import { GenericSkeletonLoader } from 'ui-patterns/ShimmeringLoader'
+import { Status } from 'ui-patterns/Status'
 
 import { CreateOrUpdateCustomProviderSheet } from './CreateOrUpdateCustomProviderSheet'
 import {
@@ -464,9 +465,7 @@ export const CustomAuthProvidersList = () => {
                         {provider.provider_type}
                       </TableCell>
                       <TableCell className="text-xs text-foreground-light max-w-28">
-                        <Badge variant={provider.enabled ? 'success' : 'default'}>
-                          {provider.enabled ? 'Enabled' : 'Disabled'}
-                        </Badge>
+                        <Status value={provider.enabled ? 'enabled' : 'disabled'} />
                       </TableCell>
                       <TableCell className="max-w-20 bg-surface-100 @[944px]:hover:bg-surface-200 px-6">
                         <div className="absolute top-0 right-0 left-0 bottom-0 flex items-center justify-center border-l @[944px]:border-l-0">

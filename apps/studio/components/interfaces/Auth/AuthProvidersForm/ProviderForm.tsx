@@ -1,7 +1,6 @@
 import { zodResolver } from '@hookform/resolvers/zod'
 import { PermissionAction } from '@supabase/shared-types/out/constants'
 import { useParams } from 'common'
-import { Check } from 'lucide-react'
 import { useTheme } from 'next-themes'
 import { useQueryState } from 'nuqs'
 import { useCallback, useEffect, useId, useMemo, useState } from 'react'
@@ -21,6 +20,7 @@ import {
 import { Admonition } from 'ui-patterns/Admonition'
 import { Input } from 'ui-patterns/DataInputs/Input'
 import { FormItemLayout } from 'ui-patterns/form/FormItemLayout/FormItemLayout'
+import { Status } from 'ui-patterns/Status'
 
 import { NO_REQUIRED_CHARACTERS } from '../Auth.constants'
 import { AuthAlert } from './AuthAlert'
@@ -187,20 +187,7 @@ export const ProviderForm = ({ config, provider, isActive }: ProviderFormProps) 
             alt={`${provider.title} auth icon`}
           />
         }
-        meta={
-          isActive ? (
-            <div className="flex items-center gap-1 rounded-full border border-brand-400 bg-brand-200 py-1 px-1 text-xs text-primary">
-              <span className="rounded-full bg-brand-default p-0.5 text-xs text-brand-200">
-                <Check strokeWidth={2} size={12} />
-              </span>
-              <span className="px-1">Enabled</span>
-            </div>
-          ) : (
-            <div className="rounded-md border border-strong bg-surface-100 py-1 px-3 text-xs text-foreground-lighter">
-              Disabled
-            </div>
-          )
-        }
+        meta={<Status value={isActive ? 'enabled' : 'disabled'} />}
       >
         {provider.title}
       </ResourceItem>

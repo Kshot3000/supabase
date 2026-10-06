@@ -56,6 +56,12 @@ export const fragments: Registry = [
     optionalPath: '/PageSection',
   },
   {
+    name: 'Status',
+    type: 'components:fragment',
+    files: ['/Status/index.tsx'],
+    optionalPath: '/Status',
+  },
+  {
     name: 'StatusCode',
     type: 'components:fragment',
     files: ['/StatusCode/index.tsx'],

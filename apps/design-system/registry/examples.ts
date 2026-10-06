@@ -1920,6 +1920,11 @@ export const examples: Registry = [
     files: ['example/markdown-avatar-component.tsx'],
   },
   {
+    name: 'status-demo',
+    type: 'components:example',
+    files: ['example/status-demo.tsx'],
+  },
+  {
     name: 'status-code-demo',
     type: 'components:example',
     files: ['example/status-code-demo.tsx'],

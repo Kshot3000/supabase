@@ -1,0 +1,34 @@
+---
+title: Status
+description: Compact operational status for enabled/disabled and short lifecycle outcomes.
+fragment: true
+---
+
+<ComponentPreview name="status-demo" peekCode wide />
+
+## Usage
+
+```tsx
+import { Status } from 'ui-patterns/Status'
+```
+
+```tsx
+<Status value="enabled" />
+<Status value="success">Running</Status>
+```
+
+## API Reference
+
+| Prop        | Type                                                                                                     | Default | Description                                                |
+| ----------- | -------------------------------------------------------------------------------------------------------- | ------- | ---------------------------------------------------------- |
+| `value`     | `'enabled' \| 'disabled' \| 'success' \| 'failure' \| 'pending' \| 'inactive' \| 'unknown' \| 'skipped'` | —       | Semantic status. Determines icon, tone, and default label. |
+| `children`  | `ReactNode`                                                                                              | —       | Optional label override. Keep to one or two words.         |
+| `className` | `string`                                                                                                 | —       | Additional CSS classes applied to the root element.        |
+
+## Guidance
+
+Use `Status` for binary on/off state and short operational outcomes where an icon plus label improves scanability, such as auth providers, webhook deliveries, or invoice processing.
+
+Prefer Studio's `StateDot` for dense live-process tables and headers (pipelines, warehouse), where a coloured dot reads better than a pill.
+
+Prefer [Badge](../components/badge) for capsule context labels such as plan, environment, or "New". Do not use Badge for enabled/disabled or lifecycle outcomes.

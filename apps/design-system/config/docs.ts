@@ -233,6 +233,11 @@ export const docsConfig: DocsConfig = {
           items: [],
         },
         {
+          title: 'Status',
+          href: '/docs/fragments/status',
+          items: [],
+        },
+        {
           title: 'Status Codes',
           href: '/docs/fragments/status-codes',
           items: [],
