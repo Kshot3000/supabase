@@ -21,9 +21,9 @@ import {
   PageSectionSummary,
   PageSectionTitle,
 } from 'ui-patterns/PageSection'
+import { StateDot, type StateDotVariant } from 'ui-patterns/StateDot'
 
 import type { WarehouseSetupTable } from './Warehouse.utils'
-import { StateDot, type StateDotVariant } from '@/components/ui/StateDot'
 import type { WarehouseSetupStatusResponse } from '@/data/warehouse/warehouse-setup-status-query'
 
 const TABLE_STATE: Record<

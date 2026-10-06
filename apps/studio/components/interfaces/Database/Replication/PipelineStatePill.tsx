@@ -1,11 +1,11 @@
 import { cn, Tooltip, TooltipContent, TooltipTrigger } from 'ui'
 import { ShimmeringLoader } from 'ui-patterns/ShimmeringLoader'
+import { StateDot, type StateDotVariant } from 'ui-patterns/StateDot'
 
 import { TOOLTIP_UNDERLINE_CLASS_NAME } from './DetailSubtext'
 import { getPipelineDisplayState, getStatusName } from './Pipeline.utils'
 import type { PipelineDisplayType } from './Pipeline.utils'
 import { PipelineStatusName } from './Replication.constants'
-import { StateDot, type StateDotVariant } from '@/components/ui/StateDot'
 import { ReplicationPipelineStatusData } from '@/data/replication/pipeline-status-query'
 import { PipelineStatusRequestStatus } from '@/state/replication-pipeline-request-status'
 import type { ResponseError } from '@/types'

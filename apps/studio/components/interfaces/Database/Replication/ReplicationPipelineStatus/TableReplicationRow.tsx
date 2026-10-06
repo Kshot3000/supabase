@@ -11,12 +11,12 @@ import {
   TableCell,
   TableRow,
 } from 'ui'
+import { StateDot } from 'ui-patterns/StateDot'
 
 import { ErroredTableDetails } from '../ErroredTableDetails'
 import { SlotLagMetrics as SlotLagMetricsType, TableState } from './ReplicationPipelineStatus.types'
 import { getStatusConfig, getTableSyncLagLabel } from './ReplicationPipelineStatus.utils'
 import { DropdownMenuItemTooltip } from '@/components/ui/DropdownMenuItemTooltip'
-import { StateDot } from '@/components/ui/StateDot'
 import { ReplicationPipelineTableStatus } from '@/data/replication/pipeline-replication-status-query'
 
 interface TableReplicationRowProps {

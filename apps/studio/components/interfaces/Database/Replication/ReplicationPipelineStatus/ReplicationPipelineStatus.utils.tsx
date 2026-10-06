@@ -8,7 +8,7 @@ import {
   SlotWalStatus,
   TableState,
 } from './ReplicationPipelineStatus.types'
-import type { StateDotVariant } from '@/components/ui/StateDot'
+import type { StateDotVariant } from 'ui-patterns/StateDot'
 import { ReplicationPipelineStatusData } from '@/data/replication/pipeline-status-query'
 import { formatBytes } from '@/lib/helpers'
 import { PipelineStatusRequestStatus } from '@/state/replication-pipeline-request-status'

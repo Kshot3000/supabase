@@ -20,7 +20,10 @@ interface StateDotProps extends ComponentPropsWithoutRef<'span'> {
   labelClassName?: string
 }
 
-/** A coloured dot with a label for compact operational states. */
+/**
+ * Coloured dot with a label for compact operational states.
+ * Prefer Badge for capsule context labels (plan, environment, "New").
+ */
 export const StateDot = forwardRef<HTMLSpanElement, StateDotProps>(
   (
     { variant, children, isPulsing = false, pulseDelayMs = 0, className, labelClassName, ...props },

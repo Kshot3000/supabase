@@ -1,0 +1,37 @@
+---
+title: State Dot
+description: Coloured dot with a label for compact operational states.
+fragment: true
+---
+
+<ComponentPreview name="state-dot-demo" peekCode wide />
+
+## Usage
+
+```tsx
+import { StateDot } from 'ui-patterns/StateDot'
+```
+
+```tsx
+<StateDot variant="success">Enabled</StateDot>
+<StateDot variant="warning" isPulsing>
+  Starting
+</StateDot>
+```
+
+## API Reference
+
+| Prop             | Type                                                   | Default | Description                                                                   |
+| ---------------- | ------------------------------------------------------ | ------- | ----------------------------------------------------------------------------- |
+| `variant`        | `'success' \| 'warning' \| 'destructive' \| 'default'` | —       | Dot colour.                                                                   |
+| `children`       | `ReactNode`                                            | —       | Label. Prefer sentence case, one or two words.                                |
+| `isPulsing`      | `boolean`                                              | `false` | Pulse the dot for in-motion states such as starting or restarting.            |
+| `pulseDelayMs`   | `number`                                               | `0`     | Offsets `animate-ping` so neighbouring pulsing dots do not flash in lockstep. |
+| `labelClassName` | `string`                                               | —       | Additional CSS classes applied to the label.                                  |
+| `className`      | `string`                                               | —       | Additional CSS classes applied to the root element.                           |
+
+## Guidance
+
+Use State Dot for enabled/disabled and short operational outcomes where a colour signal plus label is enough, such as auth providers, pipelines, warehouse tables, or webhook delivery state.
+
+Prefer [Badge](../components/badge) for capsule context labels such as plan, environment, or "New". Do not use Badge for operational status.

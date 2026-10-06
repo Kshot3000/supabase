@@ -638,9 +638,9 @@
       "import": "./src/SqlToRest/util.ts",
       "types": "./src/SqlToRest/util.ts"
     },
-    "./Status": {
-      "import": "./src/Status/index.tsx",
-      "types": "./src/Status/index.tsx"
+    "./StateDot": {
+      "import": "./src/StateDot/index.tsx",
+      "types": "./src/StateDot/index.tsx"
     },
     "./StatusCode": {
       "import": "./src/StatusCode/index.tsx",

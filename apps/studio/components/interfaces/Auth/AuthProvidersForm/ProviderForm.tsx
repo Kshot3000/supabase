@@ -20,7 +20,7 @@ import {
 import { Admonition } from 'ui-patterns/Admonition'
 import { Input } from 'ui-patterns/DataInputs/Input'
 import { FormItemLayout } from 'ui-patterns/form/FormItemLayout/FormItemLayout'
-import { Status } from 'ui-patterns/Status'
+import { StateDot } from 'ui-patterns/StateDot'
 
 import { NO_REQUIRED_CHARACTERS } from '../Auth.constants'
 import { AuthAlert } from './AuthAlert'
@@ -187,7 +187,11 @@ export const ProviderForm = ({ config, provider, isActive }: ProviderFormProps) 
             alt={`${provider.title} auth icon`}
           />
         }
-        meta={<Status value={isActive ? 'enabled' : 'disabled'} />}
+        meta={
+          <StateDot variant={isActive ? 'success' : 'default'}>
+            {isActive ? 'Enabled' : 'Disabled'}
+          </StateDot>
+        }
       >
         {provider.title}
       </ResourceItem>
